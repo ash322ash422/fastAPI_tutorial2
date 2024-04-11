@@ -17,3 +17,5 @@ I used 'python -m pip install fastapi' , 'python -m pip install "uvicorn[stantda
 1) Create 1_main.py and 1_test_server.py and then 'uvicorn.exe 1_main:app --reload'
    
 2) Create 2_main.py and 2_test_server.py and then 'uvicorn.exe 2_main:app --reload'
+
+ NOTE:You can analyze/debug this app on URL 'http://127.0.0.1:8000/docs'
