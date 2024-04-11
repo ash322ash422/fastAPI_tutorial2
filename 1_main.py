@@ -4,14 +4,10 @@ from pydantic import BaseModel, Field
 
 app = FastAPI()
 
-
 class Category(Enum):
     TOOLS = 'tools'
     CONSUMABLES = 'consumables'
 
-
-# You can add metadata to attributes using the Field class.
-# This information will also be shown in the auto-generated documentation.
 class Item(BaseModel):
     name: str 
     price: float 
@@ -19,13 +15,11 @@ class Item(BaseModel):
     id: int 
     category: Category 
 
-
 items = {
     0: Item(name="Drills", price=2.99, count=10, id=0, category=Category.TOOLS),
     1: Item(name="Saw",    price=3.99, count=20, id=1, category=Category.TOOLS),
     2: Item(name="Wire",   price=2.99, count=50, id=2, category=Category.CONSUMABLES),
 }
-
 
 # FastAPI handles JSON serialization and deserialization for us.
 # We can simply use built-in python and Pydantic types, in this case dict[int, Item].
@@ -112,5 +106,3 @@ def delete_item(item_id: int) -> dict[str, Item]:
 
     item = items.pop(item_id)
     return {"deleted": item}
-
-
