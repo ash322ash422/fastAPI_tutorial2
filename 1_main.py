@@ -1,6 +1,6 @@
 from enum import Enum
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field #Type of data to specify
 
 app = FastAPI()
 
@@ -29,6 +29,7 @@ def index() -> dict[str, dict[int, Item]]:
 
 @app.get("/items/{item_id}")
 def query_item_by_id(item_id: int) -> Item:
+#def query_item_by_id(item_id: int, query_name: int = 2) -> Item: # makes query parameter optional with default val=2 
     if item_id not in items:
         raise HTTPException(status_code=404, detail=f"Item with {item_id=} does not exist.")
 
