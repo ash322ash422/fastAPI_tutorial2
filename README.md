@@ -10,9 +10,9 @@ STEPS FOR CREATING VIRTUAL ENV IN VS CODE ON WINDOWS:
 
 *) Now you can select your python interpreter here. You should see your env on bottom RHS.
 
-*) To install packages use : python -m pip install <package_name>
+*) To install packages use : 'python -m pip install <package_name>'. This will automatically select your python interpreter.
 
-I will use 'python -m pip install fastapi' , 'python -m pip install "uvicorn[stantdard]"' and 'python -m pip install requests'
+I used 'python -m pip install fastapi' , 'python -m pip install "uvicorn[stantdard]"' and 'python -m pip install requests'
 
 1) Create 1_main.py and 1_test_server.py and then 'uvicorn.exe 1_main:app --reload'
    
