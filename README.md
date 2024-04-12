@@ -6,7 +6,7 @@ STEPS FOR CREATING VIRTUAL ENV IN VS CODE ON WINDOWS:
 
 *) Open a new folder in VS Code.
 
-*) Click 'view'->'command palette' -> 'Python:select interpreter' -> '+Create Virtual Environment'
+*) Click 'view'->'command palette' -> 'Python:select interpreter' -> '+Create Virtual Environment' and choose 'Venv'
 
 *) Now you can select your python interpreter here. You should see your env on bottom RHS.
 
